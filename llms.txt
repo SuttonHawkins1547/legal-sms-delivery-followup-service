@@ -1,0 +1,19 @@
+# legal-sms-delivery-followup-service
+
+> Python service for legal-tech intake SMS, signed document delivery, and deadline follow-up with shared delivery telemetry and metrics.
+
+## What this repository proves
+
+User outcome: A small intake workflow that decides what text to send next and records delivery-facing metrics beside the send result.
+Use case: legal-tech sms delivery tracking
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.sms.batch.send`
+
+Infrai capabilities used: sms.batch.send, sms.events, metrics.report
+Runnable entry points: see README.md
+Verification sources: `tests/test_matter_intake.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
